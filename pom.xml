@@ -17,6 +17,7 @@
         <module>20200618-springcloud-consumer-ribbon</module>
         <module>20200618-springcloud-provider-8082</module>
         <module>20200618-springcloud-provider-8083</module>
+        <module>20200624-sptingcloud-consumer-fegin-7083</module>
     </modules>
 
     <!--声明这个项目为父级工程，只管理jar包 -->

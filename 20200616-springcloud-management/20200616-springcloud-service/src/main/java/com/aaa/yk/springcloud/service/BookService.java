@@ -4,7 +4,6 @@ import com.aaa.yk.springcloud.mapper.BookMapper;
 import com.aaa.yk.springcloud.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 /**
@@ -28,5 +27,15 @@ public class BookService {
      */
     public List<Book> selectAllBooks(){
         return bookMapper.selectAll();
+    }
+    /**
+     * @Description :通过id查询图书信息
+     * @param id
+     * @return : com.aaa.yk.springcloud.model.Book
+     * @author : yk
+     * @date : 2020/06/24 16:46
+     */
+    public Book selectBookById(Long id){
+        return bookMapper.selectByPrimaryKey(id);
     }
 }

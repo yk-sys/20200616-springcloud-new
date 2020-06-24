@@ -15,6 +15,7 @@
         <module>20200616-springcloud-mapper</module>
         <module>20200616-springcloud-model</module>
         <module>20200616-springcloud-service</module>
+        <module>20200624-springcloud-api</module>
     </modules>
 
 
