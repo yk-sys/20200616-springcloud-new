@@ -1,10 +1,11 @@
 package com.aaa.yk.springcloud.service;
 
+import com.aaa.yk.springcloud.fallback.SpringCloudServiceFallback;
 import com.aaa.yk.springcloud.model.Book;
+import com.aaa.yk.springcloud.model.LayuiTable;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,12 +28,14 @@ import java.util.List;
  * @Date 2020/6/24 0024 16:15
  * @Return
  **/
-@FeignClient(value = "book-interface")
+@FeignClient(value = "book-interface" , fallbackFactory = SpringCloudServiceFallback.class)
 public interface SpringcloudService {
 
     @GetMapping("/all")
     List<Book> selectAllBooks();
 
+    @RequestMapping(value = "/all", produces="application/json")
+     String  allBooks();
     /**
      * @Description :通过id查询图书信息
      * @param id
@@ -42,4 +45,6 @@ public interface SpringcloudService {
      */
     @PostMapping("/byId")
     Book selectBookById(@RequestParam("id") Long id);
+
+
 }

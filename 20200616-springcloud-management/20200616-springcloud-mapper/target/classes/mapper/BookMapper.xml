@@ -14,8 +14,8 @@
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into book (book_name, book_price)
-    values (#{bookName,jdbcType=VARCHAR}, #{bookPrice,jdbcType=DOUBLE})
+    insert into book (id,book_name, book_price)
+    values (#{id,jdbcType=BIGINT},#{bookName,jdbcType=VARCHAR}, #{bookPrice,jdbcType=DOUBLE})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.aaa.yk.springcloud.model.Book" >
     update book

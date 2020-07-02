@@ -38,4 +38,34 @@ public class BookService {
     public Book selectBookById(Long id){
         return bookMapper.selectByPrimaryKey(id);
     }
+    /**
+     * @Description :删除
+     * @param id
+     * @return : int
+     * @author : yk
+     * @date : 2020/06/26 15:57
+     */
+    public int deleteById(Long id){
+        return bookMapper.deleteByPrimaryKey(id);
+    }
+    /**
+     * @Description :修改
+     * @param id
+     * @return : int
+     * @author : yk
+     * @date : 2020/06/26 16:21
+     */
+    public int updateByPrimaryKey(Book id){
+        return bookMapper.updateByPrimaryKey(id);
+    }
+/**
+ * @Description :添加
+ * @param id
+ * @return : int
+ * @author : yk
+ * @date : 2020/06/26 16:32
+ */
+    public int insert(Book id){
+        return bookMapper.insert(id);
+    }
 }

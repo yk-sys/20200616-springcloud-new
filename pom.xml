@@ -17,7 +17,14 @@
         <module>20200618-springcloud-consumer-ribbon</module>
         <module>20200618-springcloud-provider-8082</module>
         <module>20200618-springcloud-provider-8083</module>
-        <module>20200624-sptingcloud-consumer-fegin-7083</module>
+        <module>20200624-sptingcloud-consumer-feign-7083</module>
+        <module>20200626-springcloud-web</module>
+        <module>20200701-springcloud-provider-hystrix-8084</module>
+        <module>20200701-springcloud-hystrix-8084</module>
+        <module>20200701-springcloud-zuul-5081</module>
+        <module>20200702-springcloud-config-server-4081</module>
+        <module>20200702-springcloud-config-client</module>
+        <module>20200702-springcloud-config-server</module>
     </modules>
 
     <!--声明这个项目为父级工程，只管理jar包 -->
